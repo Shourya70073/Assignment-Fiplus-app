@@ -26,7 +26,8 @@ List<bool> Value=[false,false,false,false,false,false,false,false,false,false,fa
                 GestureDetector(
                   onTap: () {
                     setState(() {
-                      d++;
+                       if(d<=10)
+                        d++;
                       Value[d]=true;
                     });
                   },
@@ -40,8 +41,14 @@ List<bool> Value=[false,false,false,false,false,false,false,false,false,false,fa
                 GestureDetector(
                   onTap: () {
                     setState(() {
-                      Value[d]=false;
+                      if(d<0) {
+                        
+                      }
+                      else{
+                        Value[d]=false;
+                      
                       d--;
+                      }
                     });
                   },
                   child: Container(
